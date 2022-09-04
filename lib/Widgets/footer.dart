@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:responsive_grid/responsive_grid.dart';
@@ -14,13 +13,34 @@ class Footer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: MediaQuery.of(context).size.height * 0.70,
+      height: MediaQuery.of(context).size.height * 0.80,
       width: MediaQuery.of(context).size.width * 1,
       color: Colors.grey[300],
       child: ResponsiveGridRow(children: [
-        ResponsiveGridCol(xs: 6, md: 4, sm: 6, child: AboutOurSite()),
-        ResponsiveGridCol(xs: 6, md: 4, sm: 6, child: SiteLinks()),
-        ResponsiveGridCol(xs: 6, md: 4, sm: 6, child: FollowOnSocial())
+        ResponsiveGridCol(
+            xs: 6,
+            md: 4,
+            sm: 6,
+            child: const Padding(
+              padding: EdgeInsets.only(top: 10),
+              child: AboutOurSite(),
+            )),
+        ResponsiveGridCol(
+            xs: 6,
+            md: 4,
+            sm: 6,
+            child: const Padding(
+              padding: EdgeInsets.only(top: 10),
+              child: SiteLinks(),
+            )),
+        ResponsiveGridCol(
+            xs: 6,
+            md: 4,
+            sm: 6,
+            child: const Padding(
+              padding: EdgeInsets.only(top: 10, bottom: 5),
+              child: FollowOnSocial(),
+            ))
       ]),
     );
   }
@@ -34,9 +54,10 @@ class AboutOurSite extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(20.0),
+      padding: const EdgeInsets.all(10.0),
       child: Column(
         children: [
+          Divider(),
           Text("ABOUT OUR SITE",
               style: GoogleFonts.inter(
                 textStyle: const TextStyle(
@@ -76,9 +97,10 @@ class SiteLinks extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(20.0),
+      padding: const EdgeInsets.all(10.0),
       child: Column(
         children: [
+          Divider(),
           Text("SITE LINKS",
               style: GoogleFonts.inter(
                 textStyle: const TextStyle(
@@ -148,9 +170,10 @@ class FollowOnSocial extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(20.0),
+      padding: const EdgeInsets.all(10.0),
       child: Column(
         children: [
+          Divider(),
           Text("FOLLOW ON SOCIAL MEDIA",
               style: GoogleFonts.inter(
                 textStyle: const TextStyle(

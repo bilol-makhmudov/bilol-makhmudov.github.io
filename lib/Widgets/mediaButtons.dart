@@ -37,8 +37,8 @@ class MediaButtons extends StatelessWidget {
                       },
                       icon: Image.asset(
                         'assets/images/icons/facebook.png',
-                        width: MediaQuery.of(context).size.width * 0.03,
-                        height: MediaQuery.of(context).size.height * 0.03,
+                        width: MediaQuery.of(context).size.width * 0.025,
+                        height: MediaQuery.of(context).size.height * 0.025,
                       ),
                       label: const Text(""),
                     ),
@@ -51,8 +51,8 @@ class MediaButtons extends StatelessWidget {
                       },
                       icon: Image.asset(
                         'assets/images/icons/linkedin.png',
-                        width: MediaQuery.of(context).size.width * 0.05,
-                        height: MediaQuery.of(context).size.height * 0.05,
+                        width: MediaQuery.of(context).size.width * 0.06,
+                        height: MediaQuery.of(context).size.height * 0.06,
                       ),
                       label: const Text(""),
                     ),

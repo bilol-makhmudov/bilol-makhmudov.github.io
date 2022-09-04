@@ -87,7 +87,7 @@ class Portfolio extends StatelessWidget {
                                 minFontSize: 5,
                                 textAlign: TextAlign.start,
                                 style: GoogleFonts.inter(
-                                    textStyle: TextStyle(
+                                    textStyle: const TextStyle(
                                         fontSize: 15,
                                         fontWeight: FontWeight.normal,
                                         color: Colors.white,
@@ -98,7 +98,7 @@ class Portfolio extends StatelessWidget {
                                 padding: const EdgeInsets.only(left: 20),
                                 child: SizedBox(
                                   width:
-                                      MediaQuery.of(context).size.width * 0.7,
+                                      MediaQuery.of(context).size.width * 0.75,
                                   height:
                                       MediaQuery.of(context).size.height * 0.5,
                                   child: AutoSizeText(
@@ -107,7 +107,7 @@ class Portfolio extends StatelessWidget {
                                     minFontSize: 20,
                                     textAlign: TextAlign.start,
                                     style: GoogleFonts.dmSerifDisplay(
-                                        textStyle: TextStyle(
+                                        textStyle: const TextStyle(
                                             fontSize: 78,
                                             fontWeight: FontWeight.normal,
                                             color: Colors.white,

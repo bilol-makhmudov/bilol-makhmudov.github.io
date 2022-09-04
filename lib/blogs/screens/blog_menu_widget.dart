@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import '../blog1_main.dart';
 
 class blogWidget extends StatefulWidget {
@@ -25,7 +24,8 @@ class _blogWidgetState extends State<blogWidget> {
       child: Column(
         children: [
           Ink.image(
-              image: AssetImage("assets/images/blog_assets/blogwidget.jpg"),
+              image:
+                  const AssetImage("assets/images/blog_assets/blogwidget.jpg"),
               height: 450,
               width: 350,
               fit: BoxFit.cover),

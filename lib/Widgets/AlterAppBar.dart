@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:webapp/Widgets/popupmenu.dart';
 import 'package:webapp/blogs/screens/BlogAppBar.dart';
 
 import '../blogs/blog_menu_page.dart';
@@ -7,6 +8,19 @@ import '../blogs/screens/aboutPage.dart';
 
 class AlterAppBar extends StatelessWidget {
   const AlterAppBar({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    var Width = MediaQuery.of(context).size.width;
+    var Height = MediaQuery.of(context).size.height;
+    return Width > Height ? const BigAppBar() : const SmallAppBar();
+  }
+}
+
+class BigAppBar extends StatelessWidget {
+  const BigAppBar({
     Key? key,
   }) : super(key: key);
 
@@ -30,7 +44,8 @@ class AlterAppBar extends StatelessWidget {
           ),
         ),
         Padding(
-          padding: const EdgeInsets.only(top: 8, left: 60),
+          padding: EdgeInsets.only(
+              top: 8, left: MediaQuery.of(context).size.width * 0.05),
           child: Align(
             alignment: Alignment.topLeft,
             child: TextButton(

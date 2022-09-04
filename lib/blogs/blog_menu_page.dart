@@ -59,9 +59,9 @@ class BlogMenuBody extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(15.0),
       child: ResponsiveGridRow(children: [
-        ResponsiveGridCol(xs: 12, md: 4, sm: 6, child: blogWidget()),
-        ResponsiveGridCol(xs: 12, md: 4, sm: 6, child: blogWidget()),
-        ResponsiveGridCol(xs: 12, md: 4, sm: 6, child: blogWidget()),
+        ResponsiveGridCol(xs: 12, sm: 6, md: 4, child: blogWidget()),
+        ResponsiveGridCol(xs: 12, sm: 6, md: 4, child: blogWidget()),
+        ResponsiveGridCol(xs: 12, sm: 6, md: 4, child: blogWidget()),
       ]),
     );
   }
