@@ -41,7 +41,7 @@ class BlogMenu extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: BaseAppBar(),
+        appBar: const BaseAppBar(),
         body: SingleChildScrollView(
             child: Column(
           children: [BlogMenuBody(), Footer()],

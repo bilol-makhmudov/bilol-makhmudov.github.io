@@ -102,13 +102,13 @@ class Portfolio extends StatelessWidget {
                                   height:
                                       MediaQuery.of(context).size.height * 0.5,
                                   child: AutoSizeText(
-                                    "My Flutter Internship Journey At Gigabyte LTD",
-                                    maxLines: 3,
-                                    minFontSize: 20,
+                                    "My Flutter Internship Journey At Gigabyte ltd",
+                                    maxLines: 5,
+                                    minFontSize: 3,
                                     textAlign: TextAlign.start,
                                     style: GoogleFonts.dmSerifDisplay(
-                                        textStyle: const TextStyle(
-                                            fontSize: 78,
+                                        textStyle: TextStyle(
+                                            fontSize: 55,
                                             fontWeight: FontWeight.normal,
                                             color: Colors.white,
                                             letterSpacing: 1)),

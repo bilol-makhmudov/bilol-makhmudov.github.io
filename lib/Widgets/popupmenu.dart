@@ -54,51 +54,62 @@ class _SmallAppBarState extends State<SmallAppBar> {
             height: 50,
             child: Scaffold(
               backgroundColor: Colors.transparent,
-              body: DropdownButtonHideUnderline(
-                child: DropdownButton2(
-                  offset: const Offset(-100, 0),
-                  customButton: const Icon(
-                    Icons.menu,
-                    size: 50,
-                    color: Colors.white,
-                  ),
-                  customItemsIndexes: const [3],
-                  customItemsHeight: 8,
-                  items: [
-                    ...MenuItems.firstItems.map(
-                      (item) => DropdownMenuItem<MenuItem>(
-                        value: item,
-                        child: MenuItems.buildItem(item),
-                      ),
-                    ),
-                    // const DropdownMenuItem<Divider>(enabled: false, child: Divider()),
-                    // ...MenuItems.secondItems.map(
-                    //       (item) =>
-                    //       DropdownMenuItem<MenuItem>(
-                    //         value: item,
-                    //         child: MenuItems.buildItem(item),
-                    //       ),
-                    // ),
-                  ],
-                  onChanged: (value) {
-                    MenuItems.onChanged(context, value as MenuItem);
-                  },
-                  itemHeight: 55,
-                  itemPadding: const EdgeInsets.only(left: 16, right: 16),
-                  dropdownWidth: MediaQuery.of(context).size.width,
-                  dropdownMaxHeight: MediaQuery.of(context).size.height,
-                  dropdownPadding: const EdgeInsets.symmetric(vertical: 6),
-                  buttonHeight: 30,
-                  dropdownDecoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(4),
-                    color: Colors.black,
-                  ),
-                  dropdownElevation: 8,
-                ),
-              ),
+              body: MenuWidget(),
             ),
           ),
         ],
+      ),
+    );
+  }
+}
+
+class MenuWidget extends StatelessWidget {
+  const MenuWidget({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return DropdownButtonHideUnderline(
+      child: DropdownButton2(
+        offset: const Offset(-100, 0),
+        customButton: const Icon(
+          Icons.menu,
+          size: 50,
+          color: Colors.white,
+        ),
+        customItemsIndexes: const [3],
+        customItemsHeight: 8,
+        items: [
+          ...MenuItems.firstItems.map(
+            (item) => DropdownMenuItem<MenuItem>(
+              value: item,
+              child: MenuItems.buildItem(item),
+            ),
+          ),
+          // const DropdownMenuItem<Divider>(enabled: false, child: Divider()),
+          // ...MenuItems.secondItems.map(
+          //       (item) =>
+          //       DropdownMenuItem<MenuItem>(
+          //         value: item,
+          //         child: MenuItems.buildItem(item),
+          //       ),
+          // ),
+        ],
+        onChanged: (value) {
+          MenuItems.onChanged(context, value as MenuItem);
+        },
+        itemHeight: 55,
+        itemPadding: const EdgeInsets.only(left: 16, right: 16),
+        dropdownWidth: MediaQuery.of(context).size.width,
+        dropdownMaxHeight: MediaQuery.of(context).size.height,
+        dropdownPadding: const EdgeInsets.symmetric(vertical: 6),
+        buttonHeight: 30,
+        dropdownDecoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(4),
+          color: Colors.black,
+        ),
+        dropdownElevation: 8,
       ),
     );
   }

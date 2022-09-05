@@ -1,12 +1,30 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:webapp/WIdgets/AlterLandingBody.dart';
+import 'package:webapp/blogs/screens/BlogSmallAppBar.dart';
 
 import '../blog_menu_page.dart';
 import 'aboutPage.dart';
 
 class BaseAppBar extends StatelessWidget implements PreferredSizeWidget {
-  BaseAppBar({Key? key}) : super(key: key);
+  const BaseAppBar({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    var Width = MediaQuery.of(context).size.width;
+    var Height = MediaQuery.of(context).size.height;
+    return Width > Height ? const BlogBigAppBar() : const BlogSmallAppBar();
+  }
+
+  @override
+  // TODO: implement preferredSize
+  Size get preferredSize => Size.fromHeight(70);
+}
+
+class BlogBigAppBar extends StatelessWidget {
+  const BlogBigAppBar({
+    Key? key,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -98,10 +116,6 @@ class BaseAppBar extends StatelessWidget implements PreferredSizeWidget {
       ),
     );
   }
-
-  @override
-  // TODO: implement preferredSize
-  Size get preferredSize => Size.fromHeight(70);
 }
 
 class MySearchDelegate extends SearchDelegate {
